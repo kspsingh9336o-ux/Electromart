@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElectroMart | Online Electronics Store</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:Segoe UI, sans-serif;
+    background:#f5f7fb;
+    color:#2d3436;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#4b6cb7,#182848);
+    color:white;
+    padding:35px;
+    text-align:center;
+}
+header h1{
+    font-size:40px;
+    letter-spacing:1px;
+}
+header p{
+    opacity:0.9;
+}
+
+/* NAVBAR */
+nav{
+    background:#ffffff;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    padding:15px;
+    flex-wrap:wrap;
+}
+nav ul li{
+    margin:8px 18px;
+}
+nav ul li a{
+    text-decoration:none;
+    color:#4b6cb7;
+    font-weight:600;
+}
+nav ul li a:hover{
+    color:#6c5ce7;
+}
+
+/* MAIN CONTAINER */
+.container{
+    width:92%;
+    max-width:1250px;
+    margin:40px auto;
+}
+
+/* CART BAR */
+.cart-bar{
+    background:linear-gradient(135deg,#ffffff,#f1f2f6);
+    padding:18px 25px;
+    border-radius:14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 18px rgba(0,0,0,0.1);
+    margin-bottom:40px;
+}
+.cart-bar h3{
+    color:#4b6cb7;
+}
+.cart-bar span{
+    font-size:20px;
+    font-weight:bold;
+    color:#00b894;
+}
+
+/* SECTION */
+.section{
+    margin-bottom:70px;
+}
+.section h2{
+    margin-bottom:28px;
+    font-size:28px;
+    color:#4b6cb7;
+    border-left:6px solid #6c5ce7;
+    padding-left:14px;
+}
+
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+.card{
+    background:#ffffff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 30px rgba(0,0,0,0.12);
+    transition:all 0.3s ease;
+}
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 35px rgba(0,0,0,0.18);
+}
+.card img{
+    width:98%;
+    height:450px;
+    object-fit:cover;
+}
+.card-body{
+    padding:20px;
+    text-align:center;
+}
+.card-body h3{
+    margin-bottom:8px;
+}
+.price{
+    color:#00b894;
+    font-size:19px;
+    font-weight:bold;
+}
+.buy-btn{
+    margin-top:16px;
+    background:linear-gradient(135deg,#6c5ce7,#4b6cb7);
+    color:white;
+    border:none;
+    padding:12px;
+    width:100%;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+}
+.buy-btn:hover{
+    opacity:0.9;
+}
+
+/* FOOTER */
+footer{
+    background:#182848;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚡ ElectroMart</h1>
+    <p>Smart Electronics • Smart Shopping</p>
+</header>
+
+<nav>
+<ul>
+    <li><a href="#mobiles">Mobiles</a></li>
+    <li><a href="#laptops">Laptops</a></li>
+    <li><a href="#watches">Smart Watches</a></li>
+    <li><a href="#audio">Audio</a></li>
+    <li><a href="#home">Home Electronics</a></li>
+    <li><a href="#accessories">Accessories</a></li>
+</ul>
+</nav>
+
+<div class="container">
+
+<div class="cart-bar">
+    <h3>🛒 Shopping Cart</h3>
+    <span>Total : ₹<span id="total">0</span></span>
+</div>
+
+<section id="mobiles" class="section">
+<h2>Smartphones</h2>
+<div class="products">
+    <div class="card"><img src="smartphone.jpg"><div class="card-body"><h3>5G Smartphone</h3><p class="price">₹18,000</p><button class="buy-btn" onclick="add(18000)">Add to Cart</button></div></div>
+    <div class="card"><img src="MPHweb.webp"><div class="card-body"><h3>Android Pro</h3><p class="price">₹22,000</p><button class="buy-btn" onclick="add(22000)">Add to Cart</button></div></div>
+    <div class="card"><img src="flagship.jpg"><div class="card-body"><h3>Flagship Mobile</h3><p class="price">₹38,000</p><button class="buy-btn" onclick="add(38000)">Add to Cart</button></div></div>
+</div>
+</section>
+
+<section id="laptops" class="section">
+<h2>Laptops</h2>
+<div class="products">
+    <div class="card"><img src="gaminglaptop.avif"><div class="card-body"><h3>Gaming Laptop</h3><p class="price">₹65,000</p><button class="buy-btn" onclick="add(65000)">Add to Cart</button></div></div>
+    <div class="card"><img src="businesslaptop.webp"><div class="card-body"><h3>Business Laptop</h3><p class="price">₹52,000</p><button class="buy-btn" onclick="add(52000)">Add to Cart</button></div></div>
+    <div class="card"><img src="student laptop.webp"><div class="card-body"><h3>Student Laptop</h3><p class="price">₹40,000</p><button class="buy-btn" onclick="add(40000)">Add to Cart</button></div></div>
+</div>
+</section>
+
+<section id="watches" class="section">
+<h2>Smart Watches</h2>
+<div class="products">
+    <div class="card"><img src="fitnesswatch.jpg"><div class="card-body"><h3>Fitness Watch</h3><p class="price">₹4,500</p><button class="buy-btn" onclick="add(4500)">Add to Cart</button></div></div>
+    <div class="card"><img src="primiumwatch.webp"><div class="card-body"><h3>Premium Watch</h3><p class="price">₹7,999</p><button class="buy-btn" onclick="add(7999)">Add to Cart</button></div></div>
+</div>
+</section>
+
+<section id="audio" class="section">
+<h2>Audio Devices</h2>
+<div class="products">
+    <div class="card"><img src="bluetooth.webp"><div class="card-body"><h3>Bluetooth Headphones</h3><p class="price">₹2,500</p><button class="buy-btn" onclick="add(2500)">Add to Cart</button></div></div>
+    <div class="card"><img src="speaker.avif"><div class="card-body"><h3>Wireless Speaker</h3><p class="price">₹3,200</p><button class="buy-btn" onclick="add(3200)">Add to Cart</button></div></div>
+</div>
+</section>
+
+<section id="home" class="section">
+<h2>Home Electronics</h2>
+<div class="products">
+    <div class="card"><img src="smarttv.webp"><div class="card-body"><h3>Smart LED TV</h3><p class="price">₹42,000</p><button class="buy-btn" onclick="add(42000)">Add to Cart</button></div></div>
+    <div class="card"><img src="air conditioner.webp"><div class="card-body"><h3>Air Conditioner</h3><p class="price">₹35,000</p><button class="buy-btn" onclick="add(35000)">Add to Cart</button></div></div>
+</div>
+</section>
+
+<section id="accessories" class="section">
+<h2>Computer Accessories</h2>
+<div class="products">
+    <div class="card"><img src="KeyboardUltrakeys108Blue.webp"><div class="card-body"><h3>Wireless Keyboard</h3><p class="price">₹1,200</p><button class="buy-btn" onclick="add(1200)">Add to Cart</button></div></div>
+    <div class="card"><img src="mouse.jpg"><div class="card-body"><h3>Gaming Mouse</h3><p class="price">₹900</p><button class="buy-btn" onclick="add(900)">Add to Cart</button></div></div>
+    <div class="card"><img src="hard drive.png"><div class="card-body"><h3>External Hard Drive</h3><p class="price">₹5,000</p><button class="buy-btn" onclick="add(5000)">Add to Cart</button></div></div>
+</div>
+</section>
+
+</div>
+
+<footer>
+<p>© 2025 ElectroMart | Modern Electronics E-Commerce Project</p>
+</footer>
+
+<script>
+let total=0;
+function add(price){
+    total+=price;
+    document.getElementById("total").innerText=total;
+}
+</script>
+
+</body>
+</html>
