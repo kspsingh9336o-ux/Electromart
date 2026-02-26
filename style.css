@@ -1,0 +1,10 @@
+body { font-family: Arial; background:#f2f3f6; padding:20px; }
+header { background:#2874f0; color:white; text-align:center; padding:15px; font-size:22px; }
+.products { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; margin-top:20px; }
+.card { background:white; padding:15px; border-radius:8px; box-shadow:0 0 5px #ccc; }
+.card h3 { margin:5px 0; }
+.card button { background:#ff9f00; border:none; padding:8px 12px; color:white; cursor:pointer; border-radius:5px; }
+.cart { margin-top:30px; background:white; padding:15px; border-radius:8px; }
+.cart ul { padding-left:20px; }
+input { width:100%; padding:10px; margin:8px 0; }
+button { cursor:pointer; }
